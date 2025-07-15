@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Accueil</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <nav class="navbar">
+            <div class="logo">
+                <span>
+                    <a href="home.html">
+                        <img src="pictures/LogoNav.png" alt="Logo ODC" class="logo-img" />
+                    </a>
+                </span>
+            </div>
+
+            <!-- Menu burger -->
+            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Menu principal -->
+            <ul class="menu">
+         <li><a href="Home.html" class="menu-item">Accueil</a></li>
+         <li><a href="Login.html" class="menu-item">S'inscrire</a></li>
+         <li><a href="Hire.html" class="menu-item">Postuler</a></li>
+         <li><a href="Certificat.html" class="menu-item">Certificat</a></li>
+         <li><a href="Learn.html" class="menu-item">Apprendre</a></li>
+            </ul>
+        </nav>  
+
+        <main>
+            <div class="carousel-container">
+                <!-- Caroussel Présentation -->
+ <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="pictures/Caroussel/caroussel1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="pictures/Caroussel/caroussel2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="pictures/Caroussel/caroussel3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+                <!-- Carousel description -->
+                <div class="carousel-description">
+                    <h2><strong>Présentation de l’Orange Digital Center</strong></h2>
+                    <p>
+                        Les Orange Digital Centers sont des centres d’accompagnement et de développement des compétences numériques. De la formation au codage à la création d’entreprise, ils couvrent un large champ d’activités. Gratuits et ouverts à tous, ces centres fondent l’apprentissage sur des projets concrets. Ainsi des programmes de formation dédiés aux métiers du digital sont proposés aux étudiants, aux personnes sans emploi ou déscolarisés, aux jeunes entrepreneurs...
+                    </p>
+                </div>
+
+                <!-- objective section -->
+                <section class="our-objective">
+                    <h3>NOTRE OBJECTIF</h3>
+                    <div class="objective-columns">
+                        <div class="objective-column">
+                            <h4>Former sur le digital</h4>
+                            <p>Permettre à tous d’avoir une chance d’accéder à des formations de qualités gratuitement.</p>
+                        </div>
+                        <div class="objective-column">
+                            <h4>Incuber les startups</h4>
+                            <p>Permettre à tous d’avoir une chance d’accéder à des formations de qualités gratuitement.</p>
+                        </div>
+                        <div class="objective-column">
+                            <h4>Encourager l'entrepreneuriat</h4>
+                            <p>À travers nos différents programmes de formation, nous nous efforçons de former le plus grand nombre possible de personnes à devenir des créateurs de valeur.</p>
+                        </div>
+                    </div>
+                 </section>
+
+                 <!-- Description du directeur -->
+                 <!-- <div class="DesDg">
+                     <div class="Photo-objective">
+                        <img src="pictures/DgPhoto.jpeg" alt="Photo Responsable" class="DgPhoto"/>
+                        <p class="Name"> Habib Bamba</p>
+                        <p class="Poste">Directeur de la transformation numérique </p>
+                  </div>
+
+                  <div class="finaleWords">
+                    <img src="Icons/Note.png" alt="Expression" class="Autor"/>
+                    <p class="Words">Ensemble, construisons un futur où la technologie devient un levier de transformation personnelle et collective. Merci d’être avec nous pour écrire cette nouvelle page.</p>
+                  </div>
+                 </div>
+                 -->
+                 
+                <!-- Description Argument profit ODC -->
+                 <div class="Argument">
+                        <div class="Arg-1">
+                            <div class="icon-circle">
+                                <img src="Icons/Labo.png" alt="Labo">
+                            </div>
+                           <h4>Labo</h4>
+                           <p>Emergence et réalisation d'idées innovantes dans un dispositif pédagogique.</p>
+                        </div>
+
+                         <div class="Arg-2">
+                            <div class="icon-circle">
+                                <img src="Icons/Campus.png" alt="Campus">
+                            </div>
+                           <h4>Space</h4>
+                           <p>Un endroit fun cosy, un espace de coworking un lieu de brainstorming.</p>
+                        </div>
+
+                        <div class="Arg-3">
+                            <div class="icon-circle">
+                                <img src="Icons/Expert.png" alt="Expert">
+                            </div>
+                           <h4>Expert</h4>
+                           <p>Des professionnels chevronnés du monde entier disponibles 24h/24 et 7j/7.</p>
+                        </div>
+                 </div>
+
+                 <div class="Formation">
+                    <div class="TitreFormation">
+                        <h2>Formations</h2>
+                         <p>Les bons codeurs font des applications, les grands créent des innovations et les meilleurs changent le monde.</p>
+                    </div>
+
+                    <div class="ListFormation">
+                    <div class="RA">
+                        <h3>Réalités augmentées</h3>
+                        <img src="pictures/RA.png" alt="Réalité augmentée">
+                    </div>
+
+                    <div class="IA">
+                        <h3>Intelligence artificielle</h3>
+                        <img src="pictures/IA.png" alt="Intelligence artificielle">
+                    </div>
+
+                     <div class="IO">
+                        <h3>Machine learning</h3>
+                        <img src="pictures/IO.png" alt="Machine learning">
+                    </div>
+
+                     <div class="IO-T">
+                        <h3>Internet des objets (IOT)</h3>
+                        <img src="pictures/IoT-devices.png" alt="Internet des objets (IOT)">
+                    </div>
+
+                    </div>
+
+                 </div>
+                  <!-- Description Atout ODC -->
+                 <div class="Atout">
+                     <div class="Atout-1">
+                            <div class="icon-circles">
+                                <img src="Icons/Equipement.png" alt="Labo">
+                            </div>
+                           <h4>Salles suréquipées</h4>
+                           <p>iMac de dernières générations.Environnement cloud complet dédié. Equipements réels de test.</p>
+                    </div>
+
+                    <div class="Atout-2">
+                            <div class="icon-circles">
+                                <img src="Icons/Environnement.png" alt="Labo">
+                            </div>
+                           <h4>Environnement convivial</h4>
+                           <p>Espace écologique, professionnel,idéal pour l'épanouissement intellectuel et la jouissance cognitive.</p>
+                    </div>
+
+                      <div class="Atout-3">
+                            <div class="icon-circles">
+                                <img src="Icons/Community.png" alt="Labo">
+                            </div>
+                           <h4>Community</h4>
+                           <p>Une forte communauté de developpeurs,de coachs et de passionnés de technologies qui prennent du plaisir au partage de connaissance</p>
+                    </div>
+
+                 </div>
+        </main>
+
+       <section class="inscription-footer">
+            <div class="content">
+                <h2>Inscrivez-vous gratuitement</h2>
+                <p>Passez le challenge, réussissez les tests<br>et si vous êtes parmi les meilleurs, vous serez retenus.</p>
+                <a href="#" class="cta-button">Inscrivez-vous</a>
+            </div>
+        </section>
+
+
+        <footer class="custom-footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="pictures/LogoNav.png" alt="Logo ODC" />
+                </div>
+                <div class="footer-contact">
+                    <p>+225 27 34 56 78 34</p>
+                    <p>Orangedigital@Centers.com</p>
+                </div>
+            </div>
+            <div class="footer-line"></div>
+            <div class="footer-bottom">
+                <span>© Copyright By Cohorte 7 ODA</span>
+            </div>
+        </footer>
+    </div> 
+
+    <!-- Script menu responsive -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+
+     <!-- Script page activé -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+        const menuLinks = document.querySelectorAll('.menu-item');
+        menuLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').toLowerCase();
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+    </script>
+
+   <!-- Script Bootstrap CSS et Js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

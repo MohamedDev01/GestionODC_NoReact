@@ -1,0 +1,1280 @@
+:root {
+    --color-primary: #ff7000;
+    --color-black: black;
+    --color-white: white;
+    --color-gray-dark: #333;
+    --color-gray-medium: #666;
+    --color-gray-light: #ddd;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-white);
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; 
+    gap: 0;
+}
+
+
+.carousel-container {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#carouselExample .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* ---------------- Navigation ---------------- */
+.navbar {
+    background-color: var(--color-black);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: -25px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: left;
+    margin: -25px;
+}
+
+.menu li {
+    margin: 0 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.menu a.active {
+    color: var(--color-primary);
+    text-decoration:none;
+    text-decoration-thickness: 2px;
+}
+
+.connected a {
+   text-decoration: none;
+   color: black;
+   
+}
+
+.menu a:hover,
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-white);
+    text-decoration-thickness: 2px;
+}
+
+.signup {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    display: block;
+    font-size: 14px;
+}
+
+.signup:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--color-white);
+    margin: 4px 0;
+    border-radius: 2px;
+}   
+
+.LoginTitle, .InitialTitle{
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 180px 0 20px 0; 
+      color: #ff7000;
+    }
+
+.LogoInfo, .Logoclef, .LogoPeople {
+    height: 200px;
+}
+
+.NoteSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.Informed, .Access, .People {
+    flex: 1;
+    text-align: center;
+    max-width: 350px;
+}
+
+.Informed img, .Access img, .People img {
+    margin-bottom: 20px;
+}
+
+.UnderInformed, .UnderAccess, .UnderPeople {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px 0;
+    color: var(--color-gray-dark);
+}
+
+.LineInformed, .LineAccess, .LinePeople {
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin: 10px auto;
+}
+
+.TextInfo, .TextAccess, .TextPeople {
+    margin-top: 15px;
+}
+
+.TextInfo p, .TextAccess p, .TextPeople p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-gray-medium);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 400px;
+}
+.footer-logo img {
+    height: 10px;
+    width: auto;
+}
+
+.footer-contact {
+    margin-right: 400px;
+}
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    min-height: 160px;
+    margin-bottom: 0;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+}
+
+.footer-line {
+    margin: 20px auto;
+    height: 1px;
+    background-color: var(--color-white);
+    margin-left: auto;
+    width: 70%;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.inscription-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+}
+
+.Sidepics {
+    flex: 0 0 auto;
+}
+
+.AppImage {
+    width: 350px;
+    height: auto;
+}
+
+.inscription-container {
+    flex: 0 0 auto;
+    width: 400px;
+}
+
+.inscription-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.inscription-subtitle {
+    font-size: 14px;
+    color: var(--color-gray-medium);
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+.inscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 14px;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    border: none;
+    border-bottom: 1px solid var(--color-gray-light);
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    outline: none;
+}
+
+.form-field input:focus {
+    border-bottom-color: var(--color-primary);
+}
+
+.connected {
+  max-width: 600px;      
+  width: 100%;
+  padding: 40px 32px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  width: 100%;
+  min-width: 350px;
+  font-size: 18px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+  outline: none;
+  background: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #ff9000;
+  box-shadow: 0 0 5px rgba(255, 112, 0, 0.7);
+  outline: none;
+}
+
+.Connected-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ff7000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* rendre l'image ronde */
+
+.DgPhoto{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+}
+
+.Name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.Poste{
+    font-size: 16px;
+    color: #666;
+}
+
+.Connected-btn:hover {
+  background: #ff9000;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  gap: 24px; /* espace entre les deux blocs */
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.forgot-password {
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.btn-confirm {
+    background-color: var(--color-black);
+    color: var(--color-primary);
+    border: none;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.btn-confirm:hover {
+    opacity: 0.9;
+}
+
+.login-link {
+    font-size: 13px;
+    color: var(--color-gray-medium);
+    margin-top: 15px;
+}
+
+.connect-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.connect-link:hover {
+    color: var(--color-primary);
+}
+
+.input-icon-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff7000;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.input-icon-group .form-control {
+  padding-left: 40px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 40px;
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .custom-footer {
+        display: none;
+    }
+    .menu li {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px;
+    }
+
+    .Sidepics {
+        justify-self: center;
+    }
+
+    .inscription-container {
+        justify-self: center;
+    }
+
+    .AppImage {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+        background-color: var(--color-black);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .menu a,
+    .signup {
+        font-size: 16px;
+        width: 100%;
+        display: block;
+    }
+
+    .AppImage {
+        display: none;
+    }
+
+    #form {
+        margin: 0 auto;
+        display: block;
+    }
+
+   
+    .NoteSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 5px;
+    }
+    .Informed,
+    .Access,
+    .People {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Sidepics {
+        display: none;
+    }
+
+    .inscription-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-img {
+        height: 150px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .LogoInfo, .Logoclef, .LogoPeople {
+        height: 150px;
+    }
+
+    .UnderInformed, .UnderAccess, .UnderPeople {
+        font-size: 16px;
+    }
+
+    .TextInfo p, .TextAccess p, .TextPeople p {
+        font-size: 14px;
+    }
+}
+
+
+.carousel-indicators-custom {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+
+.carousel-container {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#carouselExample .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.carousel-indicators-custom .dot {
+    height: 12px;
+    width: 12px;
+    background-color: var(--color-gray-light);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators-custom .dot.active {
+    background-color: var(--color-primary);
+}
+
+/* Carousel description text */
+.carousel-description {
+    max-width: 900px;
+    margin: 30px auto 50px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.Photo-objective {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.Photo-objective .DgPhoto {
+    grid-row: 1 / span 2;
+}
+
+.Photo-objective .Name {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+}
+
+.Photo-objective .Poste {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+}
+
+.carousel-description h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+/* Our section */
+.our-objective {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.our-objective h3 {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.objective-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.objective-column {
+    flex: 1 1 30%;
+    min-width: 250px;
+    text-align: left;
+}
+
+.objective-column h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--color-black);
+    text-align: center;
+}
+
+.objective-column p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-gray-dark);
+    text-align: center;
+}
+
+/* Responsive ajustement */
+@media screen and (max-width: 768px) {
+    .objective-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .objective-column {
+        min-width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1197px) {
+  .footer-logo {
+    display: none;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin: 16px 0 0 0;
+  }
+}
+
+
+.our-objective{
+    background-color:whitesmoke;
+    height: 100%;
+    padding: 25px;
+}
+
+.DesDg{
+     margin-left: 450px;
+}
+
+.finaleWords {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 700px;
+    margin-left: left;
+    padding-top: 15px;
+    
+}
+
+.finaleWords .Autor {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.finaleWords .Words {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Styles pour .Argument */
+
+.Argument {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+}
+
+.Argument > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-circle img {
+    max-width: 90px;
+    max-height: 90px;
+    width: auto;
+    height: auto;
+    
+}
+
+.Argument > div h4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.Argument > div p {
+    font-size: 16px;
+    color: var(--color-black);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.Argument > div h4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.Argument > div p {
+    font-size: 16px;
+    color: var(--color-black);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Formation style */
+.Formation {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.TitreFormation h2 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--color-black);
+}
+
+.TitreFormation p {
+    font-size: 16px;
+    color: var(--color-gray-dark);
+    margin-bottom: 40px;
+}
+
+.ListFormation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+}
+
+.ListFormation > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Formation h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    color: var(--color-black);
+}
+
+.Formation img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Styles for .Atout elements to match .Argument */
+.Atout {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+}
+
+.Atout > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    text-align: center;
+}
+
+.icon-circles {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-circles img {
+    max-width: 70px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.Atout > div h4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.Atout > div p {
+    font-size: 16px;
+    color: var(--color-black);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Inscription footer */
+
+.inscription-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 60px 20px;
+  background: url('pictures/Inscription-footer.jpg') center center / cover no-repeat;
+  position: relative;
+  min-height: 300px;
+  margin-top: 60px;
+}
+
+.inscription-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+}
+
+.inscription-footer .content {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  max-width: 600px;
+  color: white;
+}
+
+.inscription-footer .content h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.inscription-footer .content p {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.inscription-footer .cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.inscription-footer .cta-button:hover {
+  background-color: #e55d00;
+}
+
+/* Style Moodle */
+
+  .container-learning {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('pictures/Moodle-Pics.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+    }
+
+      .container-learning::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.65);
+      z-index: 1;
+    }
+
+    .btn-moodle {
+      position: relative;
+      z-index: 2;
+      background-color: #ff7f00;
+      color: white;
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding: 1em 2.5em;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      box-shadow: 0 5px 12px rgba(255,127,0,0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-moodle:hover, .button:focus {
+      background-color: #e67300;
+      box-shadow: 0 8px 20px rgba(230,115,0,0.8);
+      outline: none;
+    }
+
+    /* Style Top Page postuler */
+.top-img{
+    position: relative;
+    background: url('pictures/Top-pics.jpg') no-repeat center; 
+    height: 400px;
+    width: 100%;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+ .top-img::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.65);
+      z-index: 1;
+    }
+
+.top-img h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 0.5em 0;
+    position: relative;
+    z-index: 2;
+}
+
+.top-img p {
+    color: white;
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* 
+*/
+.Categorie select {
+  width: 300px !important;
+  padding: 10px 40px 10px 20px !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  background-color: yellow !important;
+  text-transform: uppercase;
+  color: black;
+  border: 2px solid #f58220; 
+  border-radius: 0;
+  background-color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.Categorie select {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23f58220' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 14px 10px;
+}
+
+.Categorie select:focus {
+  outline: none !important;
+  box-shadow: 0 0 5px #f58220 !important;
+}
+
+/* Style for the select element with class custom-select */
+.custom-select {
+  width: 160px !important;
+  padding: 10px 40px 10px 20px !important;
+  margin-top: 30px;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  text-transform: uppercase !important;
+  color: black !important;
+  border: 2px solid #f58220 !important;
+  border-radius: 0 !important;
+  background-color: white !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  cursor: pointer !important;
+  position: relative !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23f58220' stroke-width='2'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 15px center !important;
+  background-size: 14px 10px !important;
+}
+
+.custom-select:focus {
+  outline: none !important;
+  box-shadow: 0 0 5px #f58220 !important;
+}
+
+/* Courses section styling */
+.Courses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.Security {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 20px 60px;
+  gap: 20px;
+  border-radius: 8px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.CourseText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.DateDuration {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.DateDuration .Date,
+.DateDuration .Duration {
+  font-size: 16px;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .Security {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .Security img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 8px;
+  }
+
+  .CourseText {
+    padding-top: 15px;
+  }
+
+  .DateDuration {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .DateDuration .Date,
+  .DateDuration .Duration {
+    font-size: 14px;
+  }
+}
+
+.Security img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.Security h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  color: var(--color-black);
+}
+
+.Security p {
+  margin: 0 0 10px 0;
+  color: var(--color-gray-dark);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.Security .Date {
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+.Security .Date strong {
+  font-weight: bold;
+}

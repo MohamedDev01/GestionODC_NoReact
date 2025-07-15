@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="Style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <title>Connexion</title>
+  
+</head>
+
+<body>
+  <div class="page-wrapper"> 
+    <!-- NAVBAR -->
+    <nav class="navbar">  
+      <div class="logo">
+        <span>
+          <a href="home.html">
+            <img src="pictures/LogoNav.png" alt="Logo ODC" class="logo-img" />
+          </a>
+        </span>
+      </div>
+
+      <!-- Menu burger -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu principal -->
+      <ul class="menu">
+         <li><a href="Home.html" class="menu-item" >Accueil</a></li>
+         <li><a href="Login.html" class="menu-item" >S'inscrire</a></li>
+         <li><a href="Hire.html" class="menu-item" >Postuler</a></li>
+         <li><a href="Certificat.html" class="menu-item">Certificat</a></li>
+         <li><a href="Learn.html" class="menu-item">Apprendre</a></li>
+      </ul>
+    </nav>
+   
+    <main>
+      <h1 class="LoginTitle">CONNECTEZ-VOUS MAINTENANT !</h1> 
+
+      <form action="" class="connected">
+  <div class="form-group input-icon-group">
+    <span class="input-icon"><i class="fas fa-user"></i></span>
+    <input type="email" id="email" class="form-control" placeholder="Email / Numéro de téléphone" required>
+  </div>
+
+  <!-- Formulaire de connexiON -->
+  <div class="form-group input-icon-group">
+    <span class="input-icon"><i class="fas fa-lock"></i></span>
+    <input type="password" id="password" class="form-control" placeholder="Entrez votre mot de passe" required>
+  </div>
+
+  <button type="submit" class="Connected-btn">Se connecter</button>
+
+  <div class="form-options">
+    <div class="form-checkbox">
+      <input type="checkbox" id="PasswordConditions" name="PasswordConditions" required>
+      <label for="PasswordConditions">restez connecté(é)</label>
+    </div>
+    <p class="forgot-password"><a href="#">Mot de passe oublié ?</a></p>
+  </div>
+</form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="custom-footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="pictures/LogoNav.png" alt="Logo ODC" />
+        </div>
+        <div class="footer-contact">
+          <p class="number">+225 27 34 56 78 34</p>
+          <p class="site">Orangedigital@Centers.com</p>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom">
+        <span>© Copyright By Cohorte 7 ODA</span>
+      </div>
+    </footer>
+
+  </div> 
+
+  <!-- Script menu responsive -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('active');
+    }
+  </script>
+
+   <!-- Script page activé -->
+    <script>
+  const currentPage = window.location.pathname;
+  document.querySelectorAll('.menu-item').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+  <!-- Script Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+<script>
+    // Highlight active menu link
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+        const menuLinks = document.querySelectorAll('.menu a');
+        menuLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').toLowerCase();
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
