@@ -41,35 +41,30 @@
     </nav>
    
     <main>
-        <div class="Certif-Form">
-          <h1>RECHERCHEZ UN CERTIFICAT</h1>
+  <div class="Container-Certificat">
+  <h1 class="form-title">RECHERCHEZ UN CERTIFICAT</h1>
 
-          <div class="Certif-form-total">
-            <form action="" class="Form_Certification">
+  <form action="" class="certificate-form">
+    <div class="form-group input-icon-group">
+      <span class="input-icon"><i class="fas fa-user"></i></span>
+      <input type="text" id="name" class="form-control" placeholder="Entrez votre nom" required>
+    </div>
 
-             <div class="Certif-name">
-              <label for="">Nom et Prénoms</label>
-              <input type="text">
-             </div>
+    <div class="form-group input-icon-group">
+      <span class="input-icon"><i class="fas fa-calendar-alt"></i></span>
+      <input type="date" id="birthdate" class="form-control" required>
+    </div>
 
-             <div class="Certif-birthdate">
-              <label for="">Date de naissance</label>
-              <input type="date">
-             </div>
+    <div class="form-group input-icon-group">
+      <span class="input-icon"><i class="fas fa-envelope"></i></span>
+      <input type="email" id="email" class="form-control" placeholder="Entrez votre email" required>
+    </div>
 
-             <div class="Certif-mail">
-              <label for="">Email</label>
-              <input type="email">
-             </div>
+    <button type="submit" class="search-btn">Rechercher</button>
+  </form>
+  </div>
+</main>
 
-             <input type=button class="Certif-btn" value="Rechercher">
-
-
-            </form>
-          </div>
-        </div>
-        
-    </main>
 
     <!-- FOOTER -->
     <footer class="custom-footer">
@@ -80,7 +75,7 @@
         <div class="footer-contact">
           <p class="number">+225 27 34 56 78 34</p>
           <p class="site">Orangedigital@Centers.com</p>
-                            <i class="fas fa-envelope input-icon"></i>
+                            
         </div>
       </div>
       <div class="footer-line"></div>
@@ -127,4 +122,3 @@
 </script>
 </body>
 </html>
-}

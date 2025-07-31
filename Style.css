@@ -10,7 +10,7 @@
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+    
 * {
     box-sizing: border-box;
 }
@@ -36,8 +36,25 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0; 
     gap: 0;
+}
+
+.profile-main{
+      flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0 0 0; /* Ajout de padding-top pour décaler le contenu sous la navbar */
+    gap: 0;
+}
+
+/* Centrer le titre VOTRE PROFIL */
+section.container.my-5 h2.text-center.text-orange.fw-bold.mb-4 {
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 20px 0 !important;
+    width: 100% !important;
+    display: block !important;
 }
 
 
@@ -504,7 +521,7 @@ footer {
 /* ---------------- Responsive ---------------- */
 @media screen and (max-width: 1200px) {
     main {
-        padding: 40px;
+        padding: 40px 20px;
         gap: 60px;
     }
 }
@@ -513,16 +530,13 @@ footer {
     .custom-footer {
         display: none;
     }
-    .menu li {
-        margin: 0 20px;
-    }
 }
 
 @media screen and (max-width: 992px) {
     main {
         grid-template-columns: 1fr;
         gap: 40px;
-        padding: 30px;
+        padding: 30px 15px;
     }
 
     .Sidepics {
@@ -539,11 +553,21 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
+    /* Navigation fixes */
+    .navbar {
+        padding: 10px 15px;
+        min-height: 70px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .logo-img {
+        height: 35px;
+        margin-left: 10px;
+    }
+
+    .navbar .logo {
+        margin-left: 5px;
     }
 
     .menu-toggle {
@@ -552,11 +576,16 @@ footer {
     }
 
     .menu {
-        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        display: none;
-        margin-top: 10px;
+        flex-direction: column;
         background-color: var(--color-black);
+        display: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .menu.active {
@@ -564,44 +593,256 @@ footer {
     }
 
     .menu li {
-        margin: 10px 0;
-        padding: 10px 20px;
+        margin: 0;
         width: 100%;
+        border-bottom: 1px solid #333;
     }
 
-    .menu a,
-    .signup {
-        font-size: 16px;
-        width: 100%;
+    .menu a {
         display: block;
+        padding: 15px 20px;
+        width: 100%;
+        font-size: 16px;
     }
 
+    .menu a:hover {
+        background-color: #333;
+    }
+
+    /* Form improvements */
+    .inscription-section {
+        flex-direction: column;
+        padding: 120px 20px 40px;
+        gap: 30px;
+        height: auto;
+        min-height: calc(100vh - 70px);
+    }
+
+    .inscription-container {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .inscription-title {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .inscription-subtitle {
+        font-size: 14px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-field {
+        width: 100%;
+    }
+
+    .form-field input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .connected {
+        width: 90%;
+        max-width: 400px;
+        margin: 100px auto 40px;
+        padding: 30px 25px;
+    }
+
+    .form-control {
+        min-width: auto;
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+
+    .LoginTitle {
+        font-size: 24px;
+        margin: 120px 20px 30px;
+        text-align: center;
+    }
+
+    /* Carousel improvements */
+    .carousel-container {
+        margin-top: 70px;
+    }
+
+    #carouselExample .carousel-item img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .carousel-description {
+        padding: 20px 15px;
+        margin: 0 auto;
+    }
+
+    .carousel-description h2 {
+        font-size: 20px;
+    }
+
+    .carousel-description p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Section improvements */
+    .NoteSection {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .Informed, .Access, .People {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .LogoInfo, .Logoclef, .LogoPeople {
+        height: 120px;
+    }
+
+    /* Formation section */
+    .Formation {
+        padding: 0 15px;
+    }
+
+    .ListFormation {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .Formation img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Argument and Atout sections */
+    .Argument, .Atout {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .Argument > div, .Atout > div {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .icon-circle, .icon-circles {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-circle img, .icon-circles img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    /* Hide side images on mobile */
     .AppImage {
         display: none;
     }
 
-    #form {
-        margin: 0 auto;
-        display: block;
+    /* Footer improvements */
+    footer {
+        padding: 20px 15px;
     }
 
-   
-    .NoteSection {
+    .footer-top {
         flex-direction: column;
-        align-items: center;
         gap: 20px;
-        padding: 20px 5px;
-    }
-    .Informed,
-    .Access,
-    .People {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
+    }
+
+    .footer-logo, .footer-contact {
+        margin: 0;
+    }
+
+    .footer-contact p {
+        text-align: center;
+    }
+
+    /* Hire page improvements */
+    .top-img {
+        padding: 60px 20px;
+        height: 250px;
+    }
+
+    .top-img h2 {
+        font-size: 24px;
+    }
+
+    .top-img p {
+        font-size: 16px;
+    }
+
+    .Courses {
+        padding: 0 15px;
+    }
+
+    .Security {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .Security img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .CourseText {
+        padding: 0;
+    }
+
+    .DateDuration {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Custom select improvements */
+    .custom-select, .Categorie select {
+        width: 100% !important;
+        max-width: 300px;
+        font-size: 16px !important;
+        padding: 12px 40px 12px 15px !important;
+    }
+
+    /* Inscription footer improvements */
+    .inscription-footer {
+        padding: 40px 20px;
+        min-height: 250px;
+    }
+
+    .inscription-footer .content {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .inscription-footer .content h2 {
+        font-size: 24px;
+    }
+
+    .inscription-footer .content p {
+        font-size: 14px;
+    }
+
+    /* Button improvements */
+    .btn-confirm, .Connected-btn, .cta-button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+        padding: 12px;
     }
 }
 
@@ -611,21 +852,37 @@ footer {
     }
 
     .inscription-container {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .carousel-description {
+        padding: 0 15px;
+    }
+
+    .connected {
+        margin: 100px 15px 40px;
+        padding: 25px 20px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
     .logo-img {
-        height: 150px;
-        width: auto;
-        max-width: 100%;
+        height: 35px;
     }
 
     .LogoInfo, .Logoclef, .LogoPeople {
-        height: 150px;
+        height: 120px;
     }
 
     .UnderInformed, .UnderAccess, .UnderPeople {
@@ -634,6 +891,97 @@ footer {
 
     .TextInfo p, .TextAccess p, .TextPeople p {
         font-size: 14px;
+    }
+
+    .inscription-title {
+        font-size: 24px;
+    }
+
+    .inscription-subtitle {
+        font-size: 14px;
+    }
+
+    .form-field label {
+        font-size: 13px;
+    }
+
+    .form-field input {
+        font-size: 16px;
+    }
+
+    .btn-confirm {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .connected {
+        padding: 20px 15px;
+    }
+
+    .form-control {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    .Connected-btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .navbar {
+        padding: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+    }
+
+    .inscription-container {
+        padding: 0 5px;
+    }
+
+    .connected {
+        margin: 90px 10px 30px;
+        padding: 20px 15px;
+    }
+
+    .carousel-description {
+        padding: 15px 10px;
+    }
+}
+
+/* Additional responsive utilities */
+@media screen and (max-width: 768px) {
+    main {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    /* Fix for fixed navbar */
+    .page-wrapper {
+        padding-top: 0;
+    }
+
+    /* Ensure content doesn't hide under navbar */
+    .carousel-container:first-child {
+        margin-top: 70px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, footer, .inscription-footer {
+        display: none;
+    }
+    
+    main {
+        padding: 0;
     }
 }
 
@@ -1397,3 +1745,183 @@ footer {
 .Security .Date strong {
   font-weight: bold;
 }
+
+
+/* Style for the Search Certificate page */
+
+/* Conteneur principal */
+.Container-Certificat {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical */
+  align-items: center;      /* horizontal */
+  padding: 2rem;
+  background-color: #fdfdfd;
+}
+
+/* Titre du formulaire */
+.form-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FF7900;
+  margin-bottom: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Formulaire agrandi avec espacement amélioré */
+.certificate-form {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+/* Champs avec espacement amélioré */
+.input-icon-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #f60;
+  font-size: 18px;
+}
+
+.input-icon-group .form-control {
+  padding-left: 50px;
+  height: 56px;
+  border-radius: 12px;
+  border: 2px solid #f60;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border 0.3s ease-in-out;
+}
+
+.input-icon-group .form-control:focus {
+  border-color: #d45500;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Espacement entre les lignes de formulaire */
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 16px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.form-field input {
+  border: none;
+  border-bottom: 2px solid var(--color-gray-light);
+  padding: 12px 0;
+  font-size: 16px;
+  color: #333;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-field input:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+/* Bouton agrandi */
+.search-btn {
+  width: 100%;
+  background-color: #f60;
+  color: #fff;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+
+.search-btn:hover {
+  background-color: #e55d00;
+  cursor: pointer;
+}
+
+/* Espacement global du formulaire */
+.Container-Certificat {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: #fdfdfd;
+}
+
+
+/* Page Profil */
+
+.text-orange {
+  color: #ff7000;
+}
+
+.btn-orange {
+  background-color: #ff7000;
+  color: white;
+  border: none;
+}
+
+.btn-orange:hover {
+  background-color: #e66000;
+  color: white;
+}
+
+.bg-orange {
+  background-color: #ff7000;
+  color: white;
+}
+
+.badge.bg-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+
+/* Cibler tous les liens dans cette liste */
+ul.list-unstyled li.active a {
+  color: #ff7000;
+  font-weight: bold;
+}
+
+.list-unstyled a 
+{
+    text-decoration: none;
+    color: #000;
+}
+ 
+
+
